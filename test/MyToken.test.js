@@ -7,6 +7,7 @@ const BN = web3.utils.BN;
 const expect = chai.expect;
 
 contract("Token Test", async accounts => {
+    // await debug( accounts );
     const [ initialHolder, recipient, anotherAccount ] = accounts;
 
     beforeEach(async () => {
@@ -14,7 +15,7 @@ contract("Token Test", async accounts => {
     });
 
     it("All tokens should be in my account", async () => {
-        let instance = this.myToken;
+        let instance = this.myToken;    
         let totalSupply = await instance.totalSupply();
         //old style:
         //let balance = await instance.balanceOf.call(initialHolder);
