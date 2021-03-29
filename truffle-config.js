@@ -21,6 +21,12 @@ module.exports = {
       // port: 7545,
       network_id: 5777 // match any network
     },
+    ropsten_infura: {
+      provider: function() {
+        return new HDWalletProvider(process.env.MNEMONIC, "https://ropsten.infura.io/v3/37c89d5b88f04829a1bf1e9ca04e5048", MetaMaskAccountIndex)
+      },
+      network_id: 3
+    },
   },
   compilers: {    
     solc: {
